@@ -1,0 +1,19 @@
+create database university;
+use university;
+create table university.student(
+student_id int primary key,
+student_name VARCHAR(50),
+student_age int,
+student_major VARCHAR(50)
+);
+select * from university.student;
+insert into university.student(student_id, student_name, student_age, student_major) values
+(1, "Madhu", 20, "Medical Electronics Engineering"),
+(2, "Shobi", 20, "Biomedical Engineering"),
+(3, "Viggy", 19, "Cyber Security"),
+(4, "Elakkiya", 19, "Computer Science"),
+(5, "Sivadharshini", 20, "Zoology");
+select student_name from students WHERE student_major = "Computer Science";
+select * from university.student order by student_age desc limit 1;
+update university.student set student_major = "Microbiology" where student_id = 3;
+delete from university.student where student_id = 4;
